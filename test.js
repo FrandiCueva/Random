@@ -53,7 +53,7 @@ while (value > 0) {
        console.log("There is no more",name, "on the wall!", "\nLets go get 99 more!");
    }
 }
-  
+//----------New Code ----------------------
   for (i = 1; i <= 5; ++i) {
     setDelay(i);
   }
