@@ -1,5 +1,5 @@
 # Information
 
-This File has random java script Text 
+This Repostiory has random java script Text 
 
 
