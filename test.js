@@ -1,6 +1,6 @@
 /*const promt = require('prompt-sync')();
 
-var name = promt("Enter Age: ");
+var age = promt("Enter Age: ");
 var name = "Alejandro";
 
 if (age > 14 ) {
@@ -11,6 +11,7 @@ if (age > 14 ) {
 }*/
 
 //-------------------new code--------------------------
+//prompt function for use interraction!!
 
 /*const number = require('prompt-sync')();
 
@@ -23,6 +24,7 @@ console.log("Your age: Your are ", age, "years young");
 */
 
 //---------------------New Code---------------------
+//Delay code for webpage!!
 
 /* var computers = 10;
 setTimeout (delay, 1000);
@@ -38,6 +40,7 @@ console.log("All computers are broken!");
 }
 
 //------------ New Code -----------------------
+//Bottle Game
 var name = "Bottles";
 var value = 99;
 
@@ -64,3 +67,15 @@ while (value > 0) {
     }, 5000);
   }*/
  
+//--------------------New Code----------------
+// Using Functions!!!
+function bark(name, weight){
+  if (weight > 20){
+    console.log(name,"barks WOOF, WOOF!");
+  }
+  else 
+  console.log(name, "barks wood, woof!");
+}
+bark("Princess", 11);
+bark("Killer", 25);
+bark("Prince", 30);
