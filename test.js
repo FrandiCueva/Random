@@ -115,8 +115,8 @@ console.log("The are of the circle is", theArea);
 //----------New Code------------------------
 
 function playTurn(player,location){
-  points = 0;
-  if (location == 1){
+  points = 0;                       // always declare variables "var" with in a function otherwise it would be used glabaly!
+  if (location == 1){               // you can shadow a global varibale by declaring it with the same name in your function!
     points = points + 100;
   }
   return points;
