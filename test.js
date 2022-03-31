@@ -69,6 +69,8 @@ while (value > 0) {
  
 //--------------------New Code----------------
 // Using Functions!!!
+
+/*
 function bark(name, weight){
   if (weight > 20){
     console.log(name,"barks WOOF, WOOF!");
@@ -79,3 +81,45 @@ function bark(name, weight){
 bark("Princess", 11);
 bark("Killer", 25);
 bark("Prince", 30);
+*/
+
+//----------------New Code---------------
+/*
+function inVoc(temp){
+  temp =2 ;
+}
+
+var yoke = 1;
+
+inVoc(yoke);
+
+console.log(yoke);
+*/
+
+//------- New Code-------------
+/*
+function calculatedArea(r){
+    if (r <= 0){
+      return 0;
+    }
+    else {
+      area = (Math.PI * r * r);
+      return area;
+    }
+}
+var radius = 5.2;
+var theArea = calculatedArea(radius);
+console.log("The are of the circle is", theArea);
+*/
+
+//----------New Code------------------------
+
+function playTurn(player,location){
+  points = 0;
+  if (location == 1){
+    points = points + 100;
+  }
+  return points;
+}
+var total = playTurn("Mike",1);
+console.log(points);
