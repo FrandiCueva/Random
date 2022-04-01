@@ -163,7 +163,7 @@ console.log("Distance:",distance);
 */
 
 //-------------------New Code----------------------
-// Thing-A-Ma-Jig Code
+// Thing-A-Ma-Jig Code. Acts like a factorial code but its for something else
 
 function clunk(times){
   var num = times;
@@ -196,3 +196,4 @@ clunkCounter = clunkCounter + 1;
 var clunkCounter = 0;
 thingamajig(5);
 console.log(clunkCounter); 
+
