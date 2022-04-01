@@ -165,7 +165,7 @@ console.log("Distance:",distance);
 //-------------------New Code----------------------
 // Thing-A-Ma-Jig Code. Acts like a factorial code but its for something else
 
-function clunk(times){
+function clunk(times){         // always remeber to save the code before running it otherwise ill run the previous code with the prevoius inputs!!!
   var num = times;
   while(num > 0){
     display("clunk");
