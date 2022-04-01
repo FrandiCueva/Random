@@ -127,7 +127,7 @@ console.log(points);
 
 //------New Code---------
 //radius formula code
-
+/*
 var x = 32;
 var y = 44;
 var radius = 5;
@@ -160,4 +160,39 @@ var area = circleArea(radius);
 var distance = computeDistance(x,y,centerX,centerY);
 console.log("Area:",area);
 console.log("Distance:",distance);
+*/
 
+//-------------------New Code----------------------
+// Thing-A-Ma-Jig Code
+
+function clunk(times){
+  var num = times;
+  while(num > 0){
+    display("clunk");
+    num  = num - 1;
+  }
+}
+function thingamajig(size){
+  var facky = 1;
+  clunkCounter = 0;
+  if (size == 0){
+    display("clank");
+  }
+  else if (size == 1){
+    display("thunk");
+  }
+  else {
+    while(size > 1){
+    facky = facky * size;
+    size = size - 1;
+  }
+  clunk(facky);
+ }
+}
+function display(output){
+console.log(output);
+clunkCounter = clunkCounter + 1;
+}
+var clunkCounter = 0;
+thingamajig(5);
+console.log(clunkCounter); 
