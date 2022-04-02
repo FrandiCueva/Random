@@ -164,7 +164,7 @@ console.log("Distance:",distance);
 
 //-------------------New Code----------------------
 // Thing-A-Ma-Jig Code. Acts like a factorial code but its for something else
-
+/*
 function clunk(times){         // always remeber to save the code before running it otherwise ill run the previous code with the prevoius inputs!!!
   var num = times;
   while(num > 0){
@@ -195,5 +195,14 @@ clunkCounter = clunkCounter + 1;
 }
 var clunkCounter = 0;
 thingamajig(5);
-console.log(clunkCounter); 
+console.log(clunkCounter);
+*/
+
+//----------------------New Code-----------------------------
+// Arrays
+var product = ["Choo Choo Chocolate", "Icy Mint", "Cake Batter", "Bubblegum"];
+var last = product.length - 1;
+var recent = product[last];
+console.log(recent);
+
 
