@@ -219,9 +219,8 @@ function makePhrases(){
   var rand3 = Math.floor(Math.random() * words3.length);
 
   var phrase = words1[rand1] +" "+ words2[rand2] +" "+ words3[rand3];
-  const attempt = phrase.split(" ");
-  const attempt2 = capitaliseArray(attempt);
-  console.log(attempt2);
+  const arr = phrase.split(" ");
+  console.log(capitaliseArray(arr));
 }
 function capitaliseArray(capitaliseA){
   const words = capitaliseA;
