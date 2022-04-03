@@ -200,9 +200,48 @@ console.log(clunkCounter);
 
 //----------------------New Code-----------------------------
 // Arrays
+/*
 var product = ["Choo Choo Chocolate", "Icy Mint", "Cake Batter", "Bubblegum"];
 var last = product.length - 1;
 var recent = product[last];
 console.log(recent);
+*/
 
+//----------------New Code---------------------------
+/*
+function makePhrases(){
+  var words1 = ["24/7","mmulti-tier","30,000 foot","B-to-B","win-win"];
+  var words2 = ["empowered","value-added","oriented","focused","aligned"];
+  var words3 = ["process","solution","tipping-point","strategy","vision"]; 
+
+  var rand1 = Math.floor(Math.random() * words1.length);
+  var rand2 = Math.floor(Math.random() * words2.length);
+  var rand3 = Math.floor(Math.random() * words3.length);
+
+  var phrase = words1[rand1] +" "+ words2[rand2] +" "+ words3[rand3];
+  console.log(phrase);
+}
+makePhrases();
+*/
+
+function capitaliseArray(){
+  for (var i = 0; i < words.length; i++){
+    words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+  }
+   const string2 = words.join(" ");
+   const string3 = capitaliseTFL(string2);
+   console.log(string3);
+}
+
+function capitaliseTFL(a){
+  const arr = a.split(" ");
+ for (var j= 0; j < arr.length; j++){
+   arr[j] = arr[j].charAt(0).toUpperCase() + arr[j].slice(1);
+  }
+  const string = arr.join(" ");
+ return string;
+ }
+
+const words = ["me and","you and them","and you too", "and me too lol"];
+capitaliseArray();
 
