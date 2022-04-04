@@ -210,7 +210,7 @@ console.log(recent);
 //----------------New Code---------------------------
 
 function makePhrases(){
-  var words1 = ["24/7","mmulti-tier","30,000 foot","B-to-B","win-win"];
+  var words1 = ["24/7","multi-tier","30,000 foot","B-to-B","win-win"];
   var words2 = ["empowered","value-added","oriented","focused","aligned"];
   var words3 = ["process","solution","tipping-point","strategy","vision"]; 
 
@@ -220,7 +220,7 @@ function makePhrases(){
 
   var phrase = words1[rand1] +" "+ words2[rand2] +" "+ words3[rand3];
   const arr = phrase.split(" ");
-  const capitalsA = capitaliseArray(arr);
+  console.log(capitaliseArray(arr));
 }
 
 function capitaliseArray(capitaliseA){
@@ -228,8 +228,9 @@ function capitaliseArray(capitaliseA){
   for (var i = 0; i < words.length; i++){
     words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
   }
-  const string2 = words.join(" ");
-  const string3 = capitaliseTFL(string2);
+  const string = words.join(" ");
+  const string2 = capitaliseForD(string);
+  const string3 = capitaliseForS(string2);
   return string3;
 }
 function capitaliseForD(capitaliseD){
@@ -248,10 +249,7 @@ function capitaliseForD(capitaliseD){
     }
     const string = arr.join(" ");
     return string;
-  }
-
-
-
+  } 
 makePhrases();
 //const wordss = ["me and","you and them","and you too", "and me too lol"];
 //console.log(capitaliseArray(wordss));
