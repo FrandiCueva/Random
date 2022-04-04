@@ -269,20 +269,32 @@ while (i < scores.length){
 
 let products = ["Choo Choo Chocolate", "Icy Mint", "Cake Batter","Bubblegum"];
 let hasBubbleGum = [false,false,false,true];
-let i = 0;
-/*
-while (i < products.length){
+let i = 0;                                           // varibale initialization
+
+while (i < products.length){                                  
  if (hasBubbleGum[i]){
   console.log(products[i],"contains bubble gum");
  }
-  i++;
+  i++;                                               //variable increment
 }
-*/
 
-for (let i = 0; i <products.length; i++){
-  if (hasBubbleGum[i])
+for (let i = 0; i <products.length; i++){             // the for loop basically acts like a while loop but adds the variable initialization and variable increment
+  if (hasBubbleGum[i]){                               // 
   console.log(products[i],"contains bubble gum");
+  }
 }
+
+const scores = [ 
+  60,50,60,58,54,54,
+  58,50,52,54,48,69,
+  34,55,51,52,44,51,
+  69,64,66,55,52,61,
+  46,31,57,52,44,18,
+  41,53,55,61,51,44];
+  
+ for (let i = 0; i <scores.length; i++){
+   console.log("Your Bubble Solution #",i,"Score:",scores[i]);
+ }
 
 
 
