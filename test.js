@@ -208,9 +208,10 @@ console.log(recent);
 */
 
 //----------------New Code---------------------------
-
-function makePhrases(){
-  var words1 = ["24/7","multi-tier","30,000 foot","B-to-B","win-win"];
+// this code generates random words and capitalises the first letter of every word!
+/*
+function makePhrases(){                                                        
+  var words1 = ["24/7","multi-tier","30,000 foot","B-to-B","win-win"];           
   var words2 = ["empowered","value-added","oriented","focused","aligned"];
   var words3 = ["process","solution","tipping-point","strategy","vision"]; 
 
@@ -218,13 +219,12 @@ function makePhrases(){
   var rand2 = Math.floor(Math.random() * words2.length);
   var rand3 = Math.floor(Math.random() * words3.length);
 
-  var phrase = words1[rand1] +" "+ words2[rand2] +" "+ words3[rand3];
-  const arr = phrase.split(" ");
-  console.log(capitaliseArray(arr));
+  var phrase = words1[rand1] +" "+ words2[rand2] +" "+ words3[rand3]; 
+  console.log(capitaliseArray(phrase));
 }
 
-function capitaliseArray(capitaliseA){
-  const words = capitaliseA;
+function capitaliseArray(capitaliseA){                // Capitalises firt words of a string in each array!
+  const words = capitaliseA.split(" ");
   for (var i = 0; i < words.length; i++){
     words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
   }
@@ -233,7 +233,7 @@ function capitaliseArray(capitaliseA){
   const string3 = capitaliseForS(string2);
   return string3;
 }
-function capitaliseForD(capitaliseD){
+function capitaliseForD(capitaliseD){                  // Capitalises words with dashes!
   const arr = capitaliseD.split("-");
   for (var i= 0; i < arr.length; i++){
     arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
@@ -241,7 +241,7 @@ function capitaliseForD(capitaliseD){
   const string = arr.join("-");
   return string;
 }
- function capitaliseForS(capitaliseS){
+ function capitaliseForS(capitaliseS){                //capitalises words in a string!
    const arr = capitaliseS.split(" ");
    for (var i = 0; i < arr.length; i++){
      arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
@@ -250,4 +250,20 @@ function capitaliseForD(capitaliseD){
     return string;
   } 
 makePhrases();
+*/
+
+//-----------------------New Code------------------------------
+// Code for number iteration
+const scores = [ 60,50,60,58,54,54,58,50,52,54,48,69,34,55,51,52,44,51,69,64,66,55,52,61,46,31,57,52,44,18,41,53,55,61,51,44];
+let i = 0;
+
+while (i < scores.length){
+  console.log("Your Score is: ",scores[i],"Your Solution is: ",i);
+  i = i + 1;
+}
+
+
+
+
+
 
