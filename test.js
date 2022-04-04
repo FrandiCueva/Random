@@ -240,7 +240,6 @@ function capitaliseTFL(capitaliseS){
   const string = arr.join(" ");
   return string;
 }
-
 makePhrases();
 //const wordss = ["me and","you and them","and you too", "and me too lol"];
 //console.log(capitaliseArray(wordss));
