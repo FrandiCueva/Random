@@ -223,25 +223,36 @@ function makePhrases(){
 }
 makePhrases();
 */
-
 function capitaliseArray(){
   for (var i = 0; i < words.length; i++){
     words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
   }
    const string2 = words.join(" ");
-   const string3 = capitaliseTFL(string2);
-   console.log(string3);
+   const string3 = capitaliseForD(string2);
+   const string4 = capitaliseForS(string3);
+   console.log(string4);
 }
 
-function capitaliseTFL(a){
-  const arr = a.split(" ");
- for (var j= 0; j < arr.length; j++){
-   arr[j] = arr[j].charAt(0).toUpperCase() + arr[j].slice(1);
+function capitaliseForD(a){
+  const arr = a.split("-");
+  for (var i= 0; i < arr.length; i++){
+    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
   }
-  const string = arr.join(" ");
- return string;
- }
+  const string = arr.join("-");
+  return string;
+  //capitaliseForS(string);
+}
 
-const words = ["me and","you and them","and you too", "and me too lol"];
+ function capitaliseForS(b){
+   const arr = b.split(" ");
+   for (var i = 0; i < arr.length; i++){
+     arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+    }
+    const string = arr.join(" ");
+    return string;
+  }
+  
+const words = ["me-and-you","win-win","of course","we actually did-it"];
 capitaliseArray();
+//capitaliseArray();
 
