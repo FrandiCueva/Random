@@ -291,10 +291,19 @@ const scores = [
   69,64,66,55,52,61,
   46,31,57,52,44,18,
   41,53,55,61,51,44];
-  
+
+  let highScore = 0;
+
  for (let i = 0; i <scores.length; i++){
-   console.log("Your Bubble Solution #",i,"Score:",scores[i]);
+   output = "Your Bubble Solution #",i,"Score:",scores[i];
+   if (scores[i] < highScore)
+   highScore = scores[i];
  }
+ console.log("Bubble Test Scores:", scores.length);
+ console.log("Highest bubble score:",highScore);
+
+
+
 
 
 
