@@ -240,7 +240,6 @@ function capitaliseForD(a){
   }
   const string = arr.join("-");
   return string;
-  //capitaliseForS(string);
 }
 
  function capitaliseForS(b){
@@ -254,5 +253,4 @@ function capitaliseForD(a){
   
 const words = ["me-and-you","win-win","of course","we actually did-it"];
 capitaliseArray();
-//capitaliseArray();
 
