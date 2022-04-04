@@ -241,7 +241,6 @@ function capitaliseForD(capitaliseD){
   const string = arr.join("-");
   return string;
 }
-
  function capitaliseForS(capitaliseS){
    const arr = capitaliseS.split(" ");
    for (var i = 0; i < arr.length; i++){
