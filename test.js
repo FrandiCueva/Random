@@ -208,7 +208,7 @@ console.log(recent);
 */
 
 //----------------New Code---------------------------
-/*
+
 function makePhrases(){
   var words1 = ["24/7","mmulti-tier","30,000 foot","B-to-B","win-win"];
   var words2 = ["empowered","value-added","oriented","focused","aligned"];
@@ -219,22 +219,21 @@ function makePhrases(){
   var rand3 = Math.floor(Math.random() * words3.length);
 
   var phrase = words1[rand1] +" "+ words2[rand2] +" "+ words3[rand3];
-  console.log(phrase);
+  const arr = phrase.split(" ");
+  const capitalsA = capitaliseArray(arr);
 }
-makePhrases();
-*/
-function capitaliseArray(){
+
+function capitaliseArray(capitaliseA){
+  const words = capitaliseA;
   for (var i = 0; i < words.length; i++){
     words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
   }
-   const string2 = words.join(" ");
-   const string3 = capitaliseForD(string2);
-   const string4 = capitaliseForS(string3);
-   console.log(string4);
+  const string2 = words.join(" ");
+  const string3 = capitaliseTFL(string2);
+  return string3;
 }
-
-function capitaliseForD(a){
-  const arr = a.split("-");
+function capitaliseForD(capitaliseD){
+  const arr = capitaliseD.split("-");
   for (var i= 0; i < arr.length; i++){
     arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
   }
@@ -242,15 +241,18 @@ function capitaliseForD(a){
   return string;
 }
 
- function capitaliseForS(b){
-   const arr = b.split(" ");
+ function capitaliseForS(capitaliseS){
+   const arr = capitaliseS.split(" ");
    for (var i = 0; i < arr.length; i++){
      arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
     }
     const string = arr.join(" ");
     return string;
   }
-  
-const words = ["me-and-you","win-win","of course","we actually did-it"];
-capitaliseArray();
+
+
+
+makePhrases();
+//const wordss = ["me and","you and them","and you too", "and me too lol"];
+//console.log(capitaliseArray(wordss));
 
