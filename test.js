@@ -294,6 +294,8 @@ const scores = [
 
   let highScore = 0;
   let bestSolutions = [];
+  //var size = bestSolutions.length;
+  //const size = bestSolutions.length;
 
  for (let i = 0; i <scores.length; i++){
    output = "Your Bubble Solution #",i,"Score:",scores[i];
@@ -301,18 +303,21 @@ const scores = [
    highScore = scores[i];
    } 
  }
+
  for (let i = 0; i < scores.length; i++){
-   if (scores[i] > highScores)
-      bestSolutions.push();
+    if (scores[i] == highScore)
+      
+        i = bestSolutions[i];
+
+      //bestSolutions.push(i);
     }
-
-    for (let j = 0; ; j < bestSolutions.length; j++){
-
-    }
-
+ 
 
  console.log("Bubble Test Scores:", scores.length);
  console.log("Highest bubble score:",highScore);
+ console.log("Solutions with highest score: " + bestSolutions);
+ //console.log("Solutions with highest score:",bestSolutions.join(","));
+
 
 
 
