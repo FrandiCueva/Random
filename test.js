@@ -266,23 +266,24 @@ while (i < scores.length){
 
 //-----------New Code------------------------
 // Introducing the for loop
-
+/*
 let products = ["Choo Choo Chocolate", "Icy Mint", "Cake Batter","Bubblegum"];
 let hasBubbleGum = [false,false,false,true];
 let i = 0;                                           // varibale initialization
 
 while (i < products.length){                                  
- if (hasBubbleGum[i]){
-  console.log(products[i],"contains bubble gum");
- }
+  if (hasBubbleGum[i]){
+    console.log(products[i],"contains bubble gum");
+  }
   i++;                                               //variable increment
 }
 
 for (let i = 0; i <products.length; i++){             // the for loop basically acts like a while loop but adds the variable initialization and variable increment
   if (hasBubbleGum[i]){                               // 
-  console.log(products[i],"contains bubble gum");
+    console.log(products[i],"contains bubble gum");
   }
 }
+*/
 
 const scores = [ 
   60,50,60,58,54,54,
@@ -292,31 +293,61 @@ const scores = [
   46,31,57,52,44,18,
   41,53,55,61,51,44];
 
+const costs = [
+  .25,.27,.25,.25,.25,.25,
+  .33,.31,.25,.29,.27,.22,
+  .31,.25,.25,.33,.21,.25,
+  .25,.25,.28,.25,.24,.22,
+  .20,.25,.30,.25,.24,.25,
+  .25,.25,.27,.25,.26,.29];
+
+
+function printAndGettingHighScore(scores){
   let highScore = 0;
+  let output;
+  for (let i = 0; i < scores.length; i++){
+    output = "Your Bubble Solution # "+i+" Score: "+scores[i];
+    console.log(output);
+    if (scores[i] > highScore) {                              // checks each time through the loop to see if there is a new high score
+      highScore = scores[i];
+    } 
+  }
+  return highScore;
+}
+  
+function getBestResults(scores,highScores){
   let bestSolutions = [];
-  //var size = bestSolutions.length;
-  //const size = bestSolutions.length;
-
- for (let i = 0; i <scores.length; i++){
-   output = "Your Bubble Solution #",i,"Score:",scores[i];
-   if (scores[i] > highScore) {                              // checks each time through the loop to see if there is a new high score
-   highScore = scores[i];
-   } 
- }
-
- for (let i = 0; i < scores.length; i++){
-    if (scores[i] == highScore)
-      
-        i = bestSolutions[i];
-
-      //bestSolutions.push(i);
+  for (let i = 0; i < scores.length; i++){
+    if (scores[i] == highScores)
+      bestSolutions.push(i);
     }
- 
+    return bestSolutions;
+  }
 
+  function getMostCostEffectiveSolution(scores,costs,highScore){
+     let cost = 100;
+     let index;
+     for (var i = 0; i < scores.length; i++){
+       if(scores[i] == highScore){
+         if (cost > costs[i]){
+           index = i;
+           cost = costs[i];
+         }
+       }
+     }
+     return index;
+  }
+ 
+var highScore = printAndGettingHighScore(scores);
  console.log("Bubble Test Scores:", scores.length);
- console.log("Highest bubble score:",highScore);
+ console.log("Highest bubble score: "+ highScore);
+
+var bestSolutions = getBestResults(scores,highScore);
  console.log("Solutions with highest score: " + bestSolutions);
- //console.log("Solutions with highest score:",bestSolutions.join(","));
+ console.log("Solutions with highest score:",bestSolutions.join(","));
+
+ var costEffectiveSolution = getMostCostEffectiveSolution(scores,costs,highScore);
+ console.log("Bubble Solution # ",costEffectiveSolution, "The most cost effective solution");
 
 
 
