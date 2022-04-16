@@ -285,6 +285,9 @@ for (let i = 0; i <products.length; i++){             // the for loop basically 
 }
 */
 
+//------------------- New Code---------------------
+// Code for finding the score with the highest nummber
+/*
 const scores = [ 
   60,50,60,58,54,54,
   58,50,52,54,48,69,
@@ -320,6 +323,7 @@ function getBestResults(scores,highScores){
   for (let i = 0; i < scores.length; i++){
     if (scores[i] == highScores)
       bestSolutions.push(i);
+    // bestSolutions.splice(bestSolutions.length,0,i);         // This is another way to push new values into an array
     }
     return bestSolutions;
   }
@@ -348,7 +352,28 @@ var bestSolutions = getBestResults(scores,highScore);
 
  var costEffectiveSolution = getMostCostEffectiveSolution(scores,costs,highScore);
  console.log("Bubble Solution # ",costEffectiveSolution, "The most cost effective solution");
+*/
 
+// --------New Code--------------------------
+// Introducing object oriented programming
+
+var fido = {
+  name: "Fido",
+  weight: 20.2,
+  age: 4,
+  breed: "mixed",
+  activity: "Fetch Balls!"
+};
+
+var bark
+if (fido.weight > 20){
+ bark = "WOOF WOOF";
+}
+else {
+  bark = "woof woof!";
+}
+let speak = fido.name + " says " + bark + " when he wants to " + fido.activity;
+console.log(speak);
 
 
 
