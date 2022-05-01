@@ -356,7 +356,7 @@ var bestSolutions = getBestResults(scores,highScore);
 
 // --------New Code--------------------------
 // Introducing object oriented programming
-
+/*
 var fido = {
   name: "Fido",
   weight: 20.2,
@@ -374,8 +374,34 @@ else {
 }
 let speak = fido.name + " says " + bark + " when he wants to " + fido.activity;
 console.log(speak);
+*/
+
+let numberOfScores = [34,34,34,65,12,86,56,56,12,76,34,86];
+
+function getHighestTestScore(scores){
+ let output;
+ let highScore = 0;
+ for (let i = 0; i < scores.length; i++){
+   output = "Bubble solution #" + i + " score: " + scores[i];
+   console.log(output);
+   if (scores[i] > highScore){
+      highScore = scores[i];
+   }
+ }
+ return highScore;
+}
+
+function getTheBestSolution(scores){
+  
+  for (let i = 0; i < scores.length, i++){
+
+  }
+} 
 
 
+let theHighScore = getHighestTestScore(numberOfScores);
+console.log("Bubble Test: ", numberOfScores.length);
+console.log("Highest bubble score:", theHighScore);
 
 
 
