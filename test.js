@@ -376,33 +376,25 @@ let speak = fido.name + " says " + bark + " when he wants to " + fido.activity;
 console.log(speak);
 */
 
-let numberOfScores = [34,34,34,65,12,86,56,56,12,76,34,86];
+let scores =     [ 34,23,43,12,45,12
+                  ,34,12,68,12,45,12,
+                   45,12,46,12,68,47];
 
-function getHighestTestScore(scores){
- let output;
- let highScore = 0;
- for (let i = 0; i < scores.length; i++){
-   output = "Bubble solution #" + i + " score: " + scores[i];
-   console.log(output);
-   if (scores[i] > highScore){
-      highScore = scores[i];
-   }
- }
- return highScore;
-}
-
-function getTheBestSolution(scores){
-  
-  for (let i = 0; i < scores.length, i++){
-
-  }
-} 
+let cost =       [ .23,.45,.12,.56,.23,.68,
+                   .12,.84,.09,.73,.92,.24,
+                   .62,.38,.74,.16,.09,.75];
 
 
-let theHighScore = getHighestTestScore(numberOfScores);
-console.log("Bubble Test: ", numberOfScores.length);
-console.log("Highest bubble score:", theHighScore);
 
+
+
+/*console.log("Bubble Test: ");
+console.log("Highest bubble score:");
+
+console.log("Solution with highest score:");
+
+console.log("Bubble Soultion # " + + " is the most cost effective");
+*/
 
 
 
