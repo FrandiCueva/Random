@@ -287,7 +287,7 @@ for (let i = 0; i <products.length; i++){             // the for loop basically 
 
 //------------------- New Code---------------------
 // Code for finding the score with the highest nummber
-
+/*
 const scores = [ 
   60,50,60,58,54,54,
   58,50,52,54,48,69,
@@ -347,12 +347,12 @@ function getBestResults(scores,highScores){
  console.log("Highest bubble score: "+ highScore);
 
  let bestSolutions = getBestResults(scores,highScore);
- let order = bestSolutions.map((e) => ("#"+e)).join(", ");
+ let order = bestSolutions.map((e) => ("#"+e)).join(", ");      // This separates the new bubble solutions with the highest scores with a #
  console.log("Solutions with highest score: " + order);
 
  let costEffectiveSolution = getMostCostEffectiveSolution(scores,costs,highScore);
  console.log("Bubble Solution #",costEffectiveSolution, "The most cost effective solution");
-
+*/
 
 // --------New Code--------------------------
 // Introducing object oriented programming
@@ -378,3 +378,67 @@ else {
 let speak = "When " +princess.name+ " barks " +bark+ " she wants to play her favorite activity, " +princess.activity+ " with the blaster";
 console.log(speak);
 */
+
+// ----------New Code----------------------
+//Pre-qualified car code
+
+let taxi = {                                                      // Objects for Cars and spesific details
+  make: "Webville Motors",
+  model: "Taxi",
+  year: 1955,
+  color: "yellow",
+  passengers: 4,
+  convertibles: false,
+  mileage: 281341 
+};
+let cadi = {
+  make: "GM",
+  model: "Cadillac",
+  year: 1955,
+  color: "tan",
+  passengers: 5,
+  convertibles: false,
+  mileage: 12892 
+};
+let fiat = {
+  make: "Fiat",
+  model: "500",
+  year: 1957,
+  color: "Medium Blue",
+  passengers: 2,
+  convertibles: false,
+  mileage: 88000 
+};
+let chevy = {
+  make: "Chevy",
+  model: "Bel Air",
+  year: 1957,
+  color: "Red",
+  passengers: 2,
+  convertibles: false,
+  mileage: 1021 
+};
+
+function prequal(car){                            // Checks cars for milage and year
+  if(car.mileage > 10000){                        // if car mileage is bigger than 10000 then this make the entire function False otherwise it will return true and continue with the next statement
+    return false;
+  } else if(car.year > 1960){                     // if car year is bigger than 1960 then this make the entire function False otherwise it will return true and continue with the next statement
+    return false;
+  }
+  return true;
+  }
+ 
+  function prequal2(car){
+  let worthALook = prequal(car);                  // Checks the first function with the variable car for each object
+  if (worthALook){                                // if worthALook returns TRUE then it runs the first statement other wise if it return FALSE then it runs the second statement
+    console.log ("You gotta check out this " +car.make+ " " + car.model);
+  }
+  else {
+    console.log ("You should really pass on the " +car.make+ " " +car.model);
+  }
+}
+
+prequal2(taxi);
+prequal2(cadi);
+prequal2(fiat);
+prequal2(chevy);
