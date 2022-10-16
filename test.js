@@ -287,7 +287,7 @@ for (let i = 0; i <products.length; i++){             // the for loop basically 
 
 //------------------- New Code---------------------
 // Code for finding the score with the highest nummber
-/*
+
 const scores = [ 
   60,50,60,58,54,54,
   58,50,52,54,48,69,
@@ -309,7 +309,7 @@ function printAndGettingHighScore(scores){
   let highScore = 0;
   let output;
   for (let i = 0; i < scores.length; i++){
-    output = "Your Bubble Solution # "+i+" Score: "+scores[i];
+    output = "Your Bubble Solution # "+i+" Score: "+scores[i]+" and the cost is: "+ costs[i];
     console.log(output);
     if (scores[i] > highScore) {                              // checks each time through the loop to see if there is a new high score
       highScore = scores[i];
@@ -342,62 +342,39 @@ function getBestResults(scores,highScores){
      return index;
   }
  
-var highScore = printAndGettingHighScore(scores);
+ let highScore = printAndGettingHighScore(scores);
  console.log("Bubble Test Scores:", scores.length);
  console.log("Highest bubble score: "+ highScore);
 
-var bestSolutions = getBestResults(scores,highScore);
- console.log("Solutions with highest score: " + bestSolutions);
- console.log("Solutions with highest score:",bestSolutions.join(","));
+ let bestSolutions = getBestResults(scores,highScore);
+ let order = bestSolutions.map((e) => ("#"+e)).join(", ");
+ console.log("Solutions with highest score: " + order);
 
- var costEffectiveSolution = getMostCostEffectiveSolution(scores,costs,highScore);
- console.log("Bubble Solution # ",costEffectiveSolution, "The most cost effective solution");
-*/
+ let costEffectiveSolution = getMostCostEffectiveSolution(scores,costs,highScore);
+ console.log("Bubble Solution #",costEffectiveSolution, "The most cost effective solution");
+
 
 // --------New Code--------------------------
 // Introducing object oriented programming
 /*
-var fido = {
-  name: "Fido",
-  weight: 20.2,
-  age: 4,
-  breed: "mixed",
-  activity: "Fetch Balls!"
-};
+let princess = {
 
-var bark
-if (fido.weight > 20){
- bark = "WOOF WOOF";
+  name: "Princess", 
+  weight: 12,
+  age: 2,
+  breed: "CockaPoo", 
+  activity: "fetchballs"
+}
+
+let bark;
+
+if (princess.weight > 20){
+  bark = "WOOF WOOF";
 }
 else {
-  bark = "woof woof!";
+  bark = "woof woof";
 }
-let speak = fido.name + " says " + bark + " when he wants to " + fido.activity;
+
+let speak = "When " +princess.name+ " barks " +bark+ " she wants to play her favorite activity, " +princess.activity+ " with the blaster";
 console.log(speak);
 */
-
-let scores =     [ 34,23,43,12,45,12
-                  ,34,12,68,12,45,12,
-                   45,12,46,12,68,47];
-
-let cost =       [ .23,.45,.12,.56,.23,.68,
-                   .12,.84,.09,.73,.92,.24,
-                   .62,.38,.74,.16,.09,.75];
-
-
-
-
-
-/*console.log("Bubble Test: ");
-console.log("Highest bubble score:");
-
-console.log("Solution with highest score:");
-
-console.log("Bubble Soultion # " + + " is the most cost effective");
-*/
-
-
-
-
-
-
