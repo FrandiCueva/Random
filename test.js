@@ -356,7 +356,7 @@ function getBestResults(scores,highScores){
 
 // --------New Code--------------------------
 // Introducing object oriented programming
-/*
+
 let princess = {
 
   name: "Princess", 
@@ -375,13 +375,19 @@ else {
   bark = "woof woof";
 }
 
+function loseWeight(dog,amount){                  // Added a function for princess to lose weight
+   dog.weight = dog.weight - amount;
+}
 let speak = "When " +princess.name+ " barks " +bark+ " she wants to play her favorite activity, " +princess.activity+ " with the blaster";
 console.log(speak);
-*/
+
+loseWeight(princess,2);
+let newWeightForDog = princess.name + " new weight is " + princess.weight;
+console.log(newWeightForDog);
 
 // ----------New Code----------------------
 //Pre-qualified car code
-
+/*
 let taxi = {                                                      // Objects for Cars and spesific details
   make: "Webville Motors",
   model: "Taxi",
@@ -442,3 +448,4 @@ prequal2(taxi);
 prequal2(cadi);
 prequal2(fiat);
 prequal2(chevy);
+*/
