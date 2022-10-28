@@ -356,7 +356,7 @@ function getBestResults(scores,highScores){
 
 // --------New Code--------------------------
 // Introducing object oriented programming
-
+/*
 let princess = {
 
   name: "Princess", 
@@ -384,6 +384,7 @@ console.log(speak);
 loseWeight(princess,2);
 let newWeightForDog = princess.name + " new weight is " + princess.weight;
 console.log(newWeightForDog);
+*/
 
 // ----------New Code----------------------
 //Pre-qualified car code
@@ -449,3 +450,65 @@ prequal2(cadi);
 prequal2(fiat);
 prequal2(chevy);
 */
+
+//------------------------New Code--------------------------
+// secret password code
+// I upgraded this code to make a user input instead work;
+
+const prompt = require('prompt-sync')();
+
+let password = prompt("Password: ");
+
+let superSecretPassword = {
+  level: "Classified",
+  opened: 0,
+  password: 2,
+  contents: "Dr. Evel's next meeting is in Detroit!",
+  activate: ['Yes','yes','YES','YeS','yES','yeS']                  
+};
+
+//let activationWords = ['Yes','yes','YES','YeS','yES','yeS'];
+
+function getSecret(file,passwordInput){
+  file.opened = file.opened + 1;                          // This updates the "opened" property in the object but it has no affect here
+  if (passwordInput == file.password){
+    console.log(file.opened);
+    console.log(file.contents);
+     //file['activate'].push(activationWords);           // I can't get to push the array to the object, it only works is i set the words in the object array
+    console.log("Do you want to change the secret's content?");
+    let setNew = prompt("(Yes/No): "); 
+    if(file.activate.indexOf(setNew) >= 0){              //Code works with an activate parameter in the object with a single string, but does not work with multiple strings in an array, FIX IT!!
+      // output = 1;
+    let newSecret = prompt("New Secret: ");
+    setNewSecret(superSecretPassword,2,newSecret);
+    }
+    else{
+      console.log("Nevermind then, continue!");
+    }
+  } else {
+    console.log("Sorry Bra no Secret for you!");
+}
+  }
+  //activateNewSecret(output);
+
+/*
+function activateNewSecret(activate){
+  let newSecret;
+  if(activate == 1){
+  newSecret = userInputSecret("New Secret: ");
+  }
+  setNewSecret(superSecretPassword,2,newSecret);
+}
+*/
+
+function setNewSecret(file,passwordInput,newSecret){
+  if (passwordInput == file.password){
+    file.opened = 0;
+    file.contents = newSecret;
+   console.log(file.contents);
+  }
+}
+
+getSecret(superSecretPassword,password);
+
+  //"Dr. Evel's next meeting is in Philadelphia!"
