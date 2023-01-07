@@ -454,8 +454,8 @@ prequal2(chevy);
 //------------------------New Code--------------------------
 // secret password code
 // I upgraded this code to make a user input instead work;
-
-const prompt = require('prompt-sync')();
+/*
+const prompt = require('prompt-sync')();               // You only need to activate this once and call prompt for user input
 
 let password = prompt("Password: ");
 
@@ -474,13 +474,14 @@ function getSecret(file,passwordInput){
   if (passwordInput == file.password){
     console.log(file.opened);
     console.log(file.contents);
-     //file['activate'].push(activationWords);           // I can't get to push the array to the object, it only works is i set the words in the object array
+    //file.activate.push(activationWords);
+    //file['activate'].push(activationWords);           // I can't get to push the array to the object, it only works is i set the words in the object array
     console.log("Do you want to change the secret's content?");
     let setNew = prompt("(Yes/No): "); 
-    if(file.activate.indexOf(setNew) >= 0){              //Code works with an activate parameter in the object with a single string, but does not work with multiple strings in an array, FIX IT!!
-      // output = 1;
+    if(file.activate.indexOf(setNew) >= 0){              //Finally fixed the program to check if the user input matches any of the strings in the array with the ".indexOf" property
+
     let newSecret = prompt("New Secret: ");
-    setNewSecret(superSecretPassword,2,newSecret);
+    setNewSecret(superSecretPassword,2,newSecret);      // Calls the setNewSecret Function
     }
     else{
       console.log("Nevermind then, continue!");
@@ -489,19 +490,8 @@ function getSecret(file,passwordInput){
     console.log("Sorry Bra no Secret for you!");
 }
   }
-  //activateNewSecret(output);
 
-/*
-function activateNewSecret(activate){
-  let newSecret;
-  if(activate == 1){
-  newSecret = userInputSecret("New Secret: ");
-  }
-  setNewSecret(superSecretPassword,2,newSecret);
-}
-*/
-
-function setNewSecret(file,passwordInput,newSecret){
+function setNewSecret(file,passwordInput,newSecret){       // Function to set a new secret
   if (passwordInput == file.password){
     file.opened = 0;
     file.contents = newSecret;
@@ -510,5 +500,200 @@ function setNewSecret(file,passwordInput,newSecret){
 }
 
 getSecret(superSecretPassword,password);
+//"Dr. Evel's next meeting is in Philadelphia!"          // This is the input secret based on the book!
+*/
 
-  //"Dr. Evel's next meeting is in Philadelphia!"
+//----------------New Code--------------------------
+//Auto pick a random car code
+/*
+function makeCar(){
+  let makes = ["Chevy","GM","Fiat","Webville Motors","Tucker"];
+  let models = ["Cadillac","500","Bel-Air","Taxi","Torpedo"];
+  let years = [1995,1957,1948,1954,1961];
+  let colors = ["red","blue","tan","yellow","white"];
+  let convertible = [true,false];
+  
+  let rand = Math.floor(Math.random() * makes.length);
+  let rand2 = Math.floor(Math.random() * models.length);
+  let rand3 = Math.floor(Math.random() * years.length);
+  let rand4 = Math.floor(Math.random() * colors.length);
+  let rand5 = Math.floor(Math.random() * 5) + 1;
+  let rand6 = Math.floor(Math.random() * 2);
+
+  let car = {
+    make: makes[rand],
+    model: models[rand2],
+    year: years[rand3],
+    color: colors[rand4],
+    passangers: rand5,
+    convertible: convertible[rand6],
+    mileage: 0
+  }
+  displayCar(car);
+}
+
+function displayCar(car){
+  let phrase = ("Your new car is a " +car.year+" "+car.make+" "+car.model+" "+car.passangers+" "+car.convertible);
+  console.log (phrase);
+}
+makeCar();
+*/
+
+//-----------------------New Code-------------------
+// Functions with behaivor (methods are often called functions in objects and encapsulating is using the object method(function) to change a property
+
+let fiat = {
+  make: "Fiat",
+  model: "500",
+  year: 1957,
+  color: "Medium Blue",
+  passangers: 2,
+  convertible: false,
+  milage: 88000,
+  started: false,
+  fuel: 0,  
+  start: function(){
+    if (this.fuel == 0){
+    console.log("The car is empty, fill up before starting");
+    
+    } else {
+    this.started = true;
+    }
+  },
+  stop: function(){
+    this.started = false;
+  },
+  drive: function() {                                                 //added anothe method = addfuel, to start the car
+    if (this.started){
+     if(this.fuel > 0){
+      console.log(this.make+" "+this.model+" "+"goes Zoom Zoom");
+      this.fuel = this.fuel - 1;
+
+    } else {
+      console.log("Out of fuel!");
+      this.stop();
+    }
+   } else {
+      console.log("You need to start the engine first!");
+    }
+  },
+ addfuel: function(amount){                                        //parameters (amount) don't need the "this" keyword because its within a function, a local variable
+  this.fuel = this.fuel + amount;
+ }
+};
+
+let taxi = {                                                    
+  make: "Webville Motors",
+  model: "Taxi",
+  year: 1955,
+  color: "yellow",
+  passengers: 4,
+  convertibles: false,
+  mileage: 281341,
+  started: false,
+    
+    start: function(){
+      this.started = true;
+    },
+    stop: function(){
+      this.started = false;
+    },
+    drive: function() {
+      if (this.started){
+        console.log("Zoom Zoom");
+      } else {
+        console.log("You need to start the engine first!");
+      }
+    } 
+};
+let cadi = {
+  make: "GM",
+  model: "Cadillac",
+  year: 1955,
+  color: "tan",
+  passengers: 5,
+  convertibles: false,
+  mileage: 12892,
+  started: false,
+    
+    start: function(){
+      this.started = true;
+    },
+    stop: function(){
+      this.started = false;
+    },
+    drive: function() {
+      if (this.started){
+        console.log("Zoom Zoom");
+      } else {
+        console.log("You need to start the engine first!");
+      }
+    } 
+};
+let chevy = {
+  make: "Chevy",
+  model: "Bel Air",
+  year: 1957,
+  color: "Red",
+  passengers: 2,
+  convertibles: false,
+  mileage: 1021,
+  started: false,
+    
+    start: function(){
+      this.started = true;
+    },
+    stop: function(){
+      this.started = false;
+    },
+    drive: function() {
+      if (this.started){
+        console.log("Zoom Zoom");
+      } else {
+        console.log("You need to start the engine first!");
+      }
+    } 
+};
+// I could not find a way to store the methods (drive,start,stop) in one single function yet. I had copy and paste the methods to each of the objects. COME BACK IN THE FUTURE TO SEE IF YOU CAN FIX THIS!!!!
+fiat.drive();                   // Make sure you understand the sequence in calling methonds otherwise it can get tricky!!!!!
+fiat.start();
+fiat.addfuel(2);
+fiat.start();
+fiat.drive();
+fiat.drive();
+fiat.drive();
+fiat.stop();
+
+taxi.drive();
+taxi.start();
+taxi.drive();
+taxi.stop();
+
+cadi.drive();
+cadi.start();
+cadi.drive();
+cadi.stop();
+
+chevy.drive();
+chevy.start();
+chevy.drive();
+chevy.stop();
+
+// Sharpen your pencil code (just a code learning to use the "this" keyword)
+
+let eightBall = {
+  index: 0,
+  advice: ["Yes","No","Maybe","Not a chance"],
+  shake: function (){
+    this.index = this.index + 1;                   // This function from the book is not working, it keeps inputing "No"
+    if (this.index >= this.advice.length){
+      this.index = 0;
+    }
+  },
+  look: function(){
+    return this.advice[this.index];
+  }
+};
+
+eightBall.shake();
+console.log(eightBall.look());
