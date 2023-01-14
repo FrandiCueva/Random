@@ -58,18 +58,31 @@ window.onload = init;
 //---------------New Code----------------------------------------
 // Code for planets webpage
 
-/* function init () {
-    let planetG = document.getElementById("greenplanet");
-    planetG.innerHTML = "Red Alert: Hit by phaser fire!";
+ function init () {
+    let planetG = document.getElementById("greenplanet");    // getElementById checks for a reference to that element
+    planetG.innerHTML = "Red Alert: Hit by phaser fire!";    // innerHTML looks into that reference and edits with whatever new code the user wants.
+    planetG.setAttribute("class" , "redtext");               // setAttribute enables you to alter or add new attributes to your reference 
 }
 
+// to make sure that an Id Exist in your html code you can use this code to verify
+/* 
+let string = document.getElementById("stringName");
+let newStringName = string.getAttribute("new attribute");
+
+if (newStringName == null){
+    console.log ("No attribute found");
+} else {
+    // input your new code here!!
+}
+*/
+
 window.onload = init;
- */
+
 
 // ---------New Code------------------------------------------
 // Sharpen your pencil, song excersice
 
-function init(){
+/* function init(){
 
  let song1 = document.getElementById("song1");    
  let song2 = document.getElementById("song2");    
@@ -82,3 +95,4 @@ function init(){
 }
 
 window.onload = init;
+ */
