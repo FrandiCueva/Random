@@ -58,14 +58,27 @@ window.onload = init;
 //---------------New Code----------------------------------------
 // Code for planets webpage
 
-function init () {
-
+/* function init () {
     let planetG = document.getElementById("greenplanet");
     planetG.innerHTML = "Red Alert: Hit by phaser fire!";
-
-    let planetB = document.getElementById("blueplanet");
-    planetB.innerHTML = "IT's ASSS Over Here bro!"
 }
 
 window.onload = init;
+ */
 
+// ---------New Code------------------------------------------
+// Sharpen your pencil, song excersice
+
+function init(){
+
+ let song1 = document.getElementById("song1");    
+ let song2 = document.getElementById("song2");    
+ let song3 = document.getElementById("song3");    
+ 
+ song1.innerHTML = "Blue Suede Strings, by Elvis Pagely";
+ song2.innerHTML = "Great Objects on Fire, By Jerry JSON LEWIS";
+ song3.innerHTML = "I Code the Line, by Jhonny JavaScript";
+    
+}
+
+window.onload = init;
