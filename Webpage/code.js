@@ -61,7 +61,7 @@ window.onload = init;
  function init () {
     let planetG = document.getElementById("greenplanet");    // getElementById checks for a reference to that element
     planetG.innerHTML = "Red Alert: Hit by phaser fire!";    // innerHTML looks into that reference and edits with whatever new code the user wants.
-    planetG.setAttribute("class" , "redtext");               // setAttribute enables you to alter or add new attributes to your reference 
+    planetG.setAttribute("class" , "redtext");               // setAttribute enables you to alter or add new attributes to your reference. you can also use the getAtribute to get the value of an atribute
 }
 
 // to make sure that an Id Exist in your html code you can use this code to verify
@@ -77,7 +77,6 @@ if (newStringName == null){
 */
 
 window.onload = init;
-
 
 // ---------New Code------------------------------------------
 // Sharpen your pencil, song excersice

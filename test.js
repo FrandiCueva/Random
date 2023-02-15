@@ -541,7 +541,7 @@ makeCar();
 
 //-----------------------New Code-------------------
 // Functions with behaivor (methods are often called functions in objects and encapsulating is using the object method(function) to change a property
-
+/* 
 let fiat = {
   make: "Fiat",
   model: "500",
@@ -697,3 +697,272 @@ let eightBall = {
 
 eightBall.shake();
 console.log(eightBall.look());
+ */
+
+// ----------------------------New Code----------------------
+// New Code for types function!
+
+/* let test1 = "H" ;
+let test2 = 1233;
+let test3 = true;
+let test4 = {};
+let test5 = null;
+let test6 = [];
+let test7 = {"hwello" : 1234};
+let test8 = ["ssdsf", 1234];
+function test9 (){return "hello"};
+
+function getType(input){
+  console.log(typeof input);
+}
+
+getType(test1);
+getType(test2);
+getType(test3);
+getType(test4);
+getType(test5);
+getType(test6);
+getType(test7);
+getType(test8);
+getType(test9); */
+
+//-----------------------New Code---------------------
+// this is the proper way to use Nan
+
+/* let notAnumber = 0/0;
+
+if (isNaN(notAnumber)){                       // to make a code and test if its not a number is isNaN
+
+  console.log("This is not a number");
+  return 0;
+
+}
+
+*/
+
+
+// (99 == "99") ?/* if */ console.log("A number is a string!") :/* else */ console.log("No way a number is equal t a string");     // This is the ternary way to write an if statement
+
+//-----------------New Code---------------------
+// Code for Earl's auto garage exercise
+/* 
+function findCars (car) {
+  for (i = 0; i < lot.length; i++){
+    if (car === lot[i]){
+      console.log (i);
+    }
+  }
+  return - 1;
+}
+
+let chevy = {
+  model : "Chevy",
+  make: "Bel-Air"
+};
+
+let taxi = {
+  model : "Webville Motors",
+  make : "Taxi"
+};
+
+let fiat1 = {
+  model : "Fiat",
+  make : "500"
+};
+
+let fiat2 = {
+  model : "Fiat",
+  make : "500"
+};
+
+let lot = [chevy, taxi, fiat1, fiat2];
+
+let loc1 = findCars (fiat2);
+let loc2 = findCars (taxi);
+let loc3 = findCars (chevy);
+let loc4 = findCars (fiat1);
+ */
+
+//-----------New Code-----------------
+// Code for lie dectetor for truthy or falsey
+/*  
+function lieDectectorTest (){                               // remember this code adds up the lies if the value return true
+  lies = 0;
+  
+  let stolenDiamond = {};
+  if (stolenDiamond){
+    console.log("You Stole the Diamonds");
+    lies++;
+  }  
+  let car ={
+    KeysinPocket : null
+  };
+
+  if (car.KeysinPocket){
+    console.log("Uh Oh, guess you stole the car");
+    lies++;
+  };
+
+  if (car.emptyGasTank){
+    console.log("You drove the car after you stole it!");
+    lies++;
+  };
+
+  let foundYouAtTheCrimeScene = [];
+  if (foundYouAtTheCrimeScene){
+    console.log("A sure sign of guilt");
+    lies++;
+  };
+  if (foundYouAtTheCrimeScene[0]){
+    console.log("Caugh you with the stolen item");
+    lies++
+  };
+
+  let yourName = " ";  
+  if(yourName){
+    console.log("Guess you lied about your name");
+    lies++
+  };
+  return lies;
+}
+
+let amountOfLies = lieDectectorTest();
+console.log("You told " + amountOfLies + " Lies!");
+if (amountOfLies <= 3) {
+  console.log("Guilty as charged!");
+}
+
+  */
+
+//---------------New Code-----------
+// This are most used properties in JS
+/* 
+// The Length Property - holds the numer of charecters in the string or array. Good for iteration
+// The charAt() method - Return the index number of the desired integer
+
+let log = console.log;
+
+let name = "mynameis@whatidk";
+
+for (i=0;i<name.length; i++){
+  if (name.charAt(i) === "@"){
+    log ("There is a @ sign at index " + i);
+  }
+
+}
+
+// The indexOf method - takes a string as an argument and returns the index of the first charecter
+
+let phrase = "There is a cat in the house";
+
+let index = phrase.indexOf("cat");
+log ("The is a cat at index "+ index);
+
+// You can also ad a second argument as the starting index of the search
+
+let index2 = phrase.indexOf("the",5);
+log("there is a the at index " + index2);
+
+// if you call an argument and it cant be found it will return "-1"
+let index3 = phrase.indexOf("dog");
+log ("there is a dog at index "+index3);
+
+// the substring method - Takes 1 or 2 arguments and returns the string contained within it
+
+let data = "name|phrase|address";
+
+let index4 = data.substring(5,10);   // starts at index 5 and prints everything but not including 10 and anthing after that
+log ("substring is " + index4);
+
+let index5 = data.substring(5);     // or you can pass one argument and print everything starting from that argument;
+log("substring is " + index5);
+
+// The split method - takes a character and acts like a delimiter, in other word breaks the string into parts based on the giving charecter
+
+let index6 = data.split("|");
+log("Split array is ", index6);
+
+// Other methods and properties 
+
+// toLowerCase(); return every uppercase charecter to lower case
+// toUpperCase(); acts the same as the method above but return all upper case
+// slice(); returns a new string that has part of the original string
+//lastIndexOf(); acts just like indexOf but finds the last charecter not the first
+// match(); searches for a match in a string using a regular expression
+// trim(); removes white space from around the string. Really handy when precessing user input
+ */
+
+//-------- New Code--------------------
+// This is for the code to validate a phone number
+/* 
+// Larry's Code
+function valitdateLarry(phoneNumber){
+  if(phoneNumber.length > 8 || phoneNumber.length < 7){
+    return false;
+  }
+  for (i=0; i<phoneNumber.lenght;i++){
+    if(i === 3){
+      if (phoneNumber.lenght === 8 && phoneNumber.charAt(i) !== "-"){
+        return false;
+      } else if (phoneNumber.length === 7 && isNaN(phoneNumber.charAt(i))){
+        return false;
+      }
+    } else if ( isNaN(phoneNumber.charAt(i))){
+      return false;
+    }
+  }
+ return true;
+}
+
+// Brad's Code
+
+function validateBrad(phoneNumber){
+
+  let first = phoneNumber.substring(0,3);                          // fix this code because the second if statement was outside the the first which doesn't make sence hence will return a false value all the time
+  let second = phoneNumber.substring(phoneNumber.length - 4);
+  if (phoneNumber.length < 8 || phoneNumber.length > 7){
+    if (isNaN(first) || isNaN(second)){
+      return false; 
+    }
+  }
+  if (phoneNumber.length === 8){
+    return (phoneNumber.charAt(3) === "-");
+  }
+  return true;
+}
+
+// Amy's Code
+
+function validateAmy(phoneNumber){
+  return phoneNumber.match(/^\d{3}-?\d{4}$/);                   // this is a regular expression, its a little complicated you'll get use to it
+  // "^" starts to search at the beginning of your string
+  // "$" searches at the end of your string
+  // "\d" matches any one digit number
+  // "{#}" amount of numbers you want to match
+  // "-?" matches zero and a dash
+  // "/ /" beginnig and end of a regular expression
+}
+
+let phoneN = "123-4567";
+let log = console.log;
+
+log("this is larry's code ", valitdateLarry(phoneN));
+log("this is brad's code ", validateBrad(phoneN));
+log("this is amy's code ", validateAmy(phoneN));
+ */
+
+// ---------------New code-----------------------------
+// This is a laboratory excersice code that introduces "new" and "instanceOf"
+
+function Duck(sound){
+  this.sound = sound;
+  this.quack = function () {console.log(this.sound)};
+}
+
+let toy = new Duck ("quack quack");
+
+toy.quack();
+let log = console.log;
+
+log(typeof toy);
+log(toy instanceof Duck);
